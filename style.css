@@ -1938,6 +1938,27 @@ body.cursor-hover .cursor-follower {
   transform: translateY(0);
 }
 
+/* Base safety against mobile horizontal scrolling */
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+}
+
+/* Ensure images and media don't exceed container */
+img, svg, video, canvas, audio, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Marquee safety */
+.marquee-wrap {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
 /* ===== RESPONSIVE BREAKPOINTS ===== */
 @media (max-width: 1200px) {
   .projects-grid {
@@ -1952,42 +1973,70 @@ body.cursor-hover .cursor-follower {
   .hero-inner {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 50px;
+    gap: 40px;
+    padding: 20px 0;
   }
-  .hero-pill, .hero-highlights {
-    justify-content: center;
+  .hero-pill {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-title {
+    font-size: clamp(2.4rem, 5.5vw, 4rem);
+  }
+  .hero-lead, .hero-subtext {
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero-actions {
     justify-content: center;
   }
+  .hero-highlights {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
   .story-grid {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
   }
   .spotlight-card {
     grid-template-columns: 1fr;
   }
   .spotlight-content {
-    padding: 0 30px 30px 30px;
+    padding: 24px;
+  }
+  .skills-matrix {
+    grid-template-columns: repeat(2, 1fr);
   }
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .process-steps {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .career-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .testimonials-grid {
-    grid-template-columns: 1fr;
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   .contact-layout {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
+  }
+  .floating-badge {
+    position: static;
+    margin: 10px auto;
+    width: auto;
+    display: inline-flex;
+  }
+  .badge-craft {
+    left: auto;
+    top: auto;
+  }
+  .badge-experience {
+    right: auto;
+    bottom: auto;
   }
   .footer-top {
     grid-template-columns: 1fr;
@@ -1997,27 +2046,35 @@ body.cursor-hover .cursor-follower {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 20px;
+    padding: 0 16px;
   }
   .section {
-    padding: 80px 0;
+    padding: 70px 0;
+  }
+  
+  /* Navbar */
+  #navbar {
+    padding: 16px 0;
   }
   .nav-inner {
-    padding: 0 20px;
+    padding: 0 16px;
   }
-  .nav-status {
+  .nav-actions {
     display: none;
+  }
+  .hamburger {
+    display: flex;
   }
   .nav-links {
     display: none;
     flex-direction: column;
     position: fixed;
-    top: 72px;
-    left: 20px;
-    right: 20px;
+    top: 68px;
+    left: 16px;
+    right: 16px;
     background: rgba(10, 10, 10, 0.98);
     border: 1px solid var(--border-medium);
-    padding: 24px;
+    padding: 20px;
     border-radius: var(--radius-lg);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95);
     z-index: 1000;
@@ -2029,39 +2086,277 @@ body.cursor-hover .cursor-follower {
     width: 100%;
     text-align: center;
     padding: 12px;
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
-  .hamburger {
-    display: flex;
+
+  /* Hero Section */
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    min-height: auto;
   }
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .hero-title {
+    font-size: clamp(2rem, 7.5vw, 3.2rem);
+    line-height: 1.15;
+    word-break: break-word;
+  }
+  .hero-pill {
+    font-size: 0.72rem;
+    padding: 6px 14px;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+  .hero-lead {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+  .hero-subtext {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  .hero-actions .btn-yellow,
+  .hero-actions .btn-outline {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+  }
+  .hero-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    width: 100%;
+    padding-top: 20px;
+  }
+  .highlight-stat strong {
+    font-size: 1.5rem;
+  }
+  .highlight-stat span {
+    font-size: 0.72rem;
+  }
+
+  /* Portrait Visual */
+  .portrait-frame {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .floating-badge {
+    position: static;
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 12px auto 0;
+    text-align: center;
+    padding: 10px 14px;
+    font-size: 0.8rem;
+  }
+  .badge-craft {
+    left: auto;
+    top: auto;
+    border-left: 1px solid var(--border-medium);
+    border-top: 3px solid var(--yellow);
+  }
+  .badge-experience {
+    right: auto;
+    bottom: auto;
+    justify-content: center;
+  }
+
+  /* Chapter 01: Story & Milestones */
+  .section-title {
+    font-size: clamp(1.8rem, 6vw, 2.6rem);
+    word-break: break-word;
+  }
+  .story-quote-card {
+    padding: 20px 18px;
+  }
+  .story-quote-card p {
+    font-size: 0.92rem;
+  }
+  .timeline-wrap {
+    padding-left: 20px;
+  }
+  .timeline-wrap::before {
+    left: 4px;
+  }
+  .timeline-dot {
+    left: -24px;
+    width: 10px;
+    height: 10px;
+    top: 22px;
+  }
+  .timeline-item {
+    padding: 18px 16px;
+  }
+  .timeline-item h4 {
+    font-size: 0.95rem;
+  }
+  .timeline-item p {
+    font-size: 0.82rem;
   }
   .career-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
+
+  /* Chapter 02: Works Vault */
+  .portfolio-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .filter-bar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    border-radius: var(--radius-md);
+    padding: 6px;
+  }
+  .filter-btn {
+    width: 100%;
+    padding: 10px 6px;
+    font-size: 0.78rem;
+    text-align: center;
+    border-radius: var(--radius-sm);
+  }
+  .spotlight-card {
+    margin-bottom: 24px;
+  }
+  .spotlight-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+  }
+  .spotlight-metrics .metric strong {
+    font-size: 1.1rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .project-details {
+    padding: 18px;
+  }
+
+  /* Chapter 03: Skills Matrix */
+  .skills-matrix {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .skill-pillar {
+    padding: 24px 20px;
+  }
+  .tech-badges-flow {
+    gap: 8px;
+  }
+  .tech-badge-item {
+    font-size: 0.78rem;
+    padding: 8px 14px;
+  }
+
+  /* Chapter 04: Services & Blueprint */
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .service-card {
+    padding: 26px 20px;
+  }
+  .process-box {
+    padding: 28px 18px;
+  }
+  .process-header h3 {
+    font-size: 1.5rem;
   }
   .process-steps {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
-  .process-box {
-    padding: 30px 20px;
+
+  /* Chapter 05: Impact & Stats */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .stat-box {
+    padding: 22px 14px;
+  }
+  .stat-number {
+    font-size: 2.2rem;
+  }
+  .stat-label {
+    font-size: 0.8rem;
+  }
+  .stat-caption {
+    font-size: 0.72rem;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .testimonial-card {
+    padding: 24px 20px;
+  }
+
+  /* Chapter 06: Contact */
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .terminal-form {
+    padding: 22px 16px;
   }
   .form-row {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
-  .terminal-form {
-    padding: 24px;
+  .channel-card {
+    padding: 14px 18px;
+  }
+  .channel-info strong {
+    font-size: 0.9rem;
+    word-break: break-all;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 50px 0 25px;
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
   .footer-bottom {
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
     text-align: center;
   }
-  .badge-craft, .badge-experience {
-    position: static;
-    margin-top: 14px;
+}
+
+/* Extra Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-highlights {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .highlight-stat strong {
+    font-size: 1.35rem;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .stat-number {
+    font-size: 1.8rem;
+  }
+  .portrait-frame {
+    max-width: 250px;
   }
 }
