@@ -907,6 +907,72 @@ body.cursor-hover .cursor-follower {
   line-height: 1.6;
 }
 
+/* Career Track Record & Mentorship Showcase */
+.career-provenance {
+  margin-top: 60px;
+  padding-top: 45px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.career-provenance-title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.career-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.career-card:hover {
+  border-color: var(--yellow-border);
+  transform: translateY(-4px);
+  background: var(--bg-card-hover);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.career-role-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.career-company-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.career-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
 /* ===== CHAPTER 02: THE PORTFOLIO VAULT (SELECTED WORKS) ===== */
 .work-section {
   background: var(--bg-pure);
@@ -1913,6 +1979,9 @@ body.cursor-hover .cursor-follower {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .career-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
@@ -1966,6 +2035,9 @@ body.cursor-hover .cursor-follower {
     display: flex;
   }
   .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .career-grid {
     grid-template-columns: 1fr;
   }
   .services-grid {
