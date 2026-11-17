@@ -4,684 +4,1300 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>arjundev.in — Web Developer & AI-Assisted Developer</title>
+  <title>Arjun P — Independent Web Developer &amp; Digital Craftsman</title>
   <meta name="description"
-    content="arjundev.in - Arjun P is a Web Developer from Kerala, India specializing in WordPress, Shopify, Next.js and AI-assisted development workflows." />
+    content="Arjun P is an independent web developer and digital craftsman from Kerala, India. Specializing in high-performance Next.js web apps, Shopify e-commerce, custom WordPress architectures, and AI-accelerated workflows." />
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
   <link rel="shortcut icon" href="assets/images/favicon.png" />
   <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+
+  <!-- Google Fonts: Syne (Display), Plus Jakarta Sans (Body), Space Grotesk (Mono/Tech) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800;900&display=swap"
     rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- NAV -->
+  <!-- TACTILE FILM GRAIN (Eliminates flat plastic AI aesthetic) -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- READING PROGRESS INDICATOR -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- INTERACTIVE MOUSE CURSOR (Desktop) -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+  <!-- NAVIGATION -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="#home" class="logo"><span class="logo-mark">&lt;/&gt;</span> arjun<span
-          class="gradient-text">dev.in</span></a>
+      <a href="#home" class="logo">
+        <span class="logo-badge">&lt;/&gt;</span>
+        <span>arjun<span class="yellow-text">.dev</span></span>
+      </a>
+
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#works">Selected Works</a></li>
+        <li><a href="#arsenal">Arsenal</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#work">Work</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#contact" class="btn-hire">Hire Me ↗</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+
+      <div class="nav-actions">
+        <div class="nav-status">
+          <span class="status-beacon"></span>
+          <span>AVAILABLE FOR NEW BUILDS</span>
+        </div>
+        <a href="#contact" class="btn-yellow" style="padding: 10px 22px; font-size: 0.85rem;">
+          Start A Project <span class="btn-arrow">↗</span>
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section id="home" class="hero">
-    <div class="hero-bg-orbs">
-      <div class="orb orb1"></div>
-      <div class="orb orb2"></div>
-      <div class="orb orb3"></div>
-    </div>
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+
     <div class="hero-inner">
-      <div class="hero-text">
-        <div class="hero-badge"><span class="badge-dot"></span>Available for Projects</div>
-        <h1>Hi, I'm <span class="gradient-text">Arjun P</span></h1>
-        <h2 class="hero-sub">I Build Modern Websites<br />That <span class="gradient-text">Actually Work.</span></h2>
-        <p class="hero-desc">Web Developer • AI-Assisted Developer • Mentor<br />Building modern, responsive websites
-          using WordPress, Shopify, Next.js and AI-powered workflows.</p>
-        <div class="hero-cta">
-          <a href="#work" class="btn-primary">View My Work ↗</a>
-          <a href="#contact" class="btn-ghost">Let's Talk</a>
+      <div class="hero-text-col fade-up-element">
+        <div class="hero-pill">
+          <span class="dot"></span>
+          <span>INDEPENDENT DIGITAL CRAFTSMAN</span>
         </div>
-        <div class="tech-strip">
-          <span>HTML5</span><span>CSS3</span><span>JS</span><span>React</span>
-          <span>Next.js</span><span>WordPress</span><span>Shopify</span><span>AI</span>
-        </div>
-      </div>
-      <div class="hero-img-wrap">
-        <div class="hero-img-ring"></div>
-        <div class="hero-img-ring ring2"></div>
-        <img src="assets/images/arjun.jpg" alt="Arjun P" class="hero-photo" id="hero-photo"
-          onerror="this.style.display='none';document.getElementById('hero-placeholder').style.display='flex';" />
-        <div class="hero-photo-placeholder" id="hero-placeholder" style="display:none"><span>AP</span></div>
-        <div class="hero-code-card">
-          <div class="code-dots"><span></span><span></span><span></span></div>
-          <pre><code>const developer = {
-  name: "Arjun P",
-  from: "Kerala, India",
-  skills: ["React","Next.js",
-    "WordPress","Shopify"],
-  ai: true,
-  exp: "5+ years"
-};</code></pre>
-        </div>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <div class="scroll-line"></div><span>Scroll Down</span>
-    </div>
-  </section>
 
-  <!-- STATS -->
-  <section class="stats-bar">
-    <div class="stats-inner">
-      <div class="stat-item">
-        <h3>5+</h3>
-        <p>Years Experience</p>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <h3>70+</h3>
-        <p>Projects Delivered</p>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <h3>100%</h3>
-        <p>Client Satisfaction</p>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <h3>∞</h3>
-        <p>Curiosity & Learning</p>
-      </div>
-    </div>
-  </section>
+        <h1 class="hero-title">
+          I Build Websites That <span class="yellow-text">Actually Sell.</span>
+        </h1>
 
-  <!-- ABOUT -->
-  <section id="about" class="about section">
-    <div class="container">
-      <div class="section-tag">About Me</div>
-      <div class="about-grid">
-        <div class="about-left">
-          <div class="about-img-wrap">
-            <img src="assets/images/arjun.jpg" alt="Arjun P" class="about-photo"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-            <div class="about-placeholder" style="display:none">AP</div>
-            <div class="about-img-badge">&#9733; Kerala, India</div>
+        <p class="hero-lead">
+          Hi, I'm <strong>Arjun P</strong> — an independent web developer and digital architect from Kerala, India. I design and engineer high-velocity digital real estate for brands that refuse to settle for ordinary.
+        </p>
+
+        <p class="hero-subtext">
+          No generic templates. No cookie-cutter fluff. Just bespoke, high-performance platforms built with Next.js, headless architectures, custom WordPress, and high-converting Shopify engines.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#works" class="btn-yellow">
+            Explore Selected Works <span class="btn-arrow">↗</span>
+          </a>
+          <a href="#contact" class="btn-outline">
+            Discuss Your Vision
+          </a>
+        </div>
+
+        <div class="hero-highlights">
+          <div class="highlight-stat">
+            <strong>5+</strong>
+            <span>Years In Craft</span>
+          </div>
+          <div class="highlight-stat">
+            <strong>70+</strong>
+            <span>Platforms Shipped</span>
+          </div>
+          <div class="highlight-stat">
+            <strong>100%</strong>
+            <span>On-Time Velocity</span>
+          </div>
+          <div class="highlight-stat">
+            <strong>&lt; 1.2s</strong>
+            <span>Average Speed</span>
           </div>
         </div>
-        <div class="about-right">
-          <h2>Passionate about building<br /><span class="gradient-text">digital experiences</span></h2>
-          <p>Hi, I'm <strong>Arjun P</strong>, a Web Developer from Kerala, India with over five years of experience
-            building websites for businesses and individuals. My focus is creating clean, responsive, and user-friendly
-            websites using modern development practices.</p>
-          <p>I've been integrating AI into my development workflow to improve productivity and accelerate development. I
-            also enjoy mentoring aspiring developers by sharing practical knowledge from my own learning journey.</p>
-          <div class="philosophy-card">
-            <div class="quote-icon">"</div>
-            <p>A good website should be simple, fast, and easy to use. I focus on clean interfaces, maintainable code,
-              and practical solutions.</p>
+      </div>
+
+      <!-- Hero Portrait Visual with Geometric Framing -->
+      <div class="hero-visual fade-up-element">
+        <div class="portrait-frame">
+          <div class="portrait-border-box">
+            <img src="assets/images/arjun.jpg" alt="Arjun P - Web Developer" class="portrait-img" id="hero-photo"
+              onerror="this.style.display='none';document.getElementById('portrait-placeholder').style.display='flex';" />
+            <div class="portrait-fallback" id="portrait-placeholder" style="display: none;">AP</div>
           </div>
-          <a href="#work" class="btn-primary">View My Projects ↗</a>
+
+          <div class="floating-badge badge-craft">
+            <span>LOCATION</span>
+            <strong>Kerala, India ✦ Global</strong>
+          </div>
+
+          <div class="floating-badge badge-experience">
+            <div class="exp-icon">⚡</div>
+            <div>
+              <p>Specialization</p>
+              <strong>Next.js • WP • Shopify</strong>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="services section">
+  <!-- INFINITE VELOCITY MARQUEE -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-content">
+      <div class="marquee-track">
+        <span>BESPOKE WEB DEVELOPMENT</span><span class="star">★</span>
+        <span class="outline-text">NEXT.JS &amp; HEADLESS STACKS</span><span class="star">★</span>
+        <span>SHOPIFY ECOMMERCE MASTERY</span><span class="star">★</span>
+        <span class="outline-text">70+ DELIVERED CLIENT BUILDS</span><span class="star">★</span>
+        <span>ZERO AI-GENERATED CLICHES</span><span class="star">★</span>
+        <span class="outline-text">LIGHTNING PERFORMANCE</span><span class="star">★</span>
+        <span>HIGH-CONVERTING UX</span><span class="star">★</span>
+      </div>
+      <div class="marquee-track">
+        <span>BESPOKE WEB DEVELOPMENT</span><span class="star">★</span>
+        <span class="outline-text">NEXT.JS &amp; HEADLESS STACKS</span><span class="star">★</span>
+        <span>SHOPIFY ECOMMERCE MASTERY</span><span class="star">★</span>
+        <span class="outline-text">70+ DELIVERED CLIENT BUILDS</span><span class="star">★</span>
+        <span>ZERO AI-GENERATED CLICHES</span><span class="star">★</span>
+        <span class="outline-text">LIGHTNING PERFORMANCE</span><span class="star">★</span>
+        <span>HIGH-CONVERTING UX</span><span class="star">★</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAPTER 01: THE STORY & ORIGIN (ABOUT ME) -->
+  <section id="story" class="section story-section">
     <div class="container">
-      <div class="section-tag">What I Do</div>
-      <h2 class="section-title">Services I <span class="gradient-text">Offer</span></h2>
+      <div class="chapter-meta">
+        <span class="chapter-number">01</span>
+        <span>THE ORIGIN &amp; PHILOSOPHY</span>
+      </div>
+
+      <div class="story-grid">
+        <div class="story-left fade-up-element">
+          <h2 class="section-title">
+            I Treat Every Website As If It Were <span class="yellow-text">My Own Company.</span>
+          </h2>
+
+          <div class="story-body">
+            <p>
+              Most websites today look completely identical: sterile cards, recycled corporate gradients, and sluggish templates that drive customers straight into the arms of competitors.
+            </p>
+            <p>
+              Over five years ago, I started with a simple belief: <strong>a website shouldn't just be an online brochure — it should be a 24/7 revenue-generating machine</strong> that communicates trust, authority, and elegance in milliseconds.
+            </p>
+            <p>
+              Based in Kerala, India, I collaborate with founders, creative agencies, and fast-scaling e-commerce businesses around the globe. Whether crafting a headless Next.js web application, scaling a Shopify flagship store, or architecting custom WordPress platforms, I merge deep technical performance with bespoke design.
+            </p>
+          </div>
+
+          <div class="story-quote-card">
+            <p>
+              "Code is a commodity. Purpose, speed, and obsessive attention to user psychology are what create unforgettable digital products."
+            </p>
+            <div class="quote-author">// ARJUN P — INDEPENDENT DEVELOPER</div>
+          </div>
+        </div>
+
+        <div class="story-right fade-up-element">
+          <!-- Interactive Story Milestones -->
+          <div class="timeline-wrap">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-year">2019 — THE OBSESSION</span>
+              <h4>Self-Taught Roots &amp; Core Standards</h4>
+              <p>Fell in love with HTML, CSS, JavaScript, and custom WordPress engineering. Focused obsessively on clean code, responsive layouts, and cross-browser consistency.</p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-year">2021 — COMMERCIAL VELOCITY</span>
+              <h4>Mastering Client Solutions at Scale</h4>
+              <p>Delivered 30+ client projects across Kerala, the UAE, and global markets. Deep-dived into WooCommerce, Shopify Liquid, and high-converting funnel architectures.</p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-year">2023 — THE HEADLESS ERA</span>
+              <h4>Modern JavaScript &amp; Decoupled Stacks</h4>
+              <p>Expanded into Next.js, React, and headless CMS architectures, delivering sub-second load times and immersive, app-like web experiences.</p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-year">2026 &amp; BEYOND — ELITE WORKFLOWS</span>
+              <h4>AI-Accelerated Craft &amp; Mentorship</h4>
+              <p>Pioneering AI-augmented development workflows to eliminate boilerplate and ship bespoke, production-ready platforms at 3x velocity, while mentoring rising developers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 02: SELECTED WORKS (THE PORTFOLIO VAULT) -->
+  <section id="works" class="section work-section">
+    <div class="container">
+      <div class="chapter-meta">
+        <span class="chapter-number">02</span>
+        <span>THE PORTFOLIO VAULT</span>
+      </div>
+
+      <div class="portfolio-header-row">
+        <div>
+          <h2 class="section-title">
+            Curated Works That <span class="yellow-text">Moved The Needle.</span>
+          </h2>
+          <p class="section-desc" style="margin-bottom: 0;">
+            12 real-world platforms engineered for clients spanning e-commerce, AI automation, hospitality, healthcare, and creative tech.
+          </p>
+        </div>
+
+        <!-- Interactive Category Filter Bar -->
+        <div class="filter-bar" id="portfolioFilter">
+          <button class="filter-btn active" data-filter="all">All Works (12)</button>
+          <button class="filter-btn" data-filter="nextjs">Next.js &amp; Modern</button>
+          <button class="filter-btn" data-filter="shopify">Shopify &amp; D2C</button>
+          <button class="filter-btn" data-filter="wordpress">WordPress &amp; CMS</button>
+        </div>
+      </div>
+
+      <!-- FLAGSHIP SPOTLIGHT PROJECT -->
+      <div class="spotlight-card fade-up-element" data-category="wordpress nextjs">
+        <div class="spotlight-media">
+          <span class="spotlight-badge">★ FLAGSHIP SHOWCASE</span>
+          <img src="assets/images/proj_automatemybiz.png" alt="AutomateMyBiz.ai Platform" />
+        </div>
+        <div class="spotlight-content">
+          <div class="spotlight-meta">// 01 · AI WORKFLOW AUTOMATION</div>
+          <h3 class="spotlight-title">AutomateMyBiz.ai</h3>
+          <p class="spotlight-desc">
+            A high-impact enterprise landing platform and conversion funnel built for an AI workflow automation consultancy. Features high-contrast dark visuals, responsive pricing tiers, and interactive consultation booking.
+          </p>
+          <div class="spotlight-metrics">
+            <div class="metric">
+              <strong>99 / 100</strong>
+              <span>Performance</span>
+            </div>
+            <div class="metric">
+              <strong>+180%</strong>
+              <span>Lead Inquiries</span>
+            </div>
+            <div class="metric">
+              <strong>0.8s</strong>
+              <span>Speed Index</span>
+            </div>
+          </div>
+          <div class="spotlight-tags">
+            <span>WordPress Core</span>
+            <span>Custom Architecture</span>
+            <span>AI Automation</span>
+            <span>High Conversion</span>
+          </div>
+          <a href="https://automatemybiz.ai/" target="_blank" rel="noopener" class="btn-yellow" style="align-self: flex-start;">
+            Visit Live Platform <span class="btn-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- MASTER WORKS GRID -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- 02: Bliss Garden Landscaping -->
+        <div class="project-card fade-up-element" data-category="wordpress">
+          <div class="browser-chrome">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">blissgardenlandscaping.com</div>
+          </div>
+          <div class="project-img-box">
+            <img src="assets/images/proj_blissgarden.png" alt="Bliss Garden Landscaping" loading="lazy" />
+            <div class="project-hover-overlay">
+              <span class="view-live-pill">Explore Site ↗</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header-meta">
+              <span class="project-index">// 02 · ARCHITECTURE</span>
+              <span class="project-category-tag">WordPress</span>
+            </div>
+            <h4 class="project-name">
+              Bliss Garden Landscaping
+              <span class="card-arrow">↗</span>
+            </h4>
+            <p class="project-synopsis">
+              Nature-centric luxury landscaping portfolio showcasing large-scale outdoor transformations with high-res galleries.
+            </p>
+            <div class="project-chips">
+              <span>WordPress</span>
+              <span>Elementor Pro</span>
+              <span>Visual Showcase</span>
+            </div>
+          </div>
+          <a href="https://blissgardenlandscaping.com/" target="_blank" rel="noopener" class="stretched-link" aria-label="View Bliss Garden Landscaping" style="position: absolute; inset: 0; z-index: 5;"></a>
+        </div>
+
+        <!-- 03: Bhumika Vedics -->
+        <div class="project-card fade-up-element" data-category="shopify">
+          <div class="browser-chrome">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">bhumikavedics.in</div>
+          </div>
+          <div class="project-img-box">
+            <img src="assets/images/proj_bhumikavedics.png" alt="Bhumika Vedics D2C" loading="lazy" />
+            <div class="project-hover-overlay">
+              <span class="view-live-pill">Explore Store ↗</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header-meta">
+              <span class="project-index">// 03 · D2C ECOMMERCE</span>
+              <span class="project-category-tag">Shopify</span>
+            </div>
+            <h4 class="project-name">
+              Bhumika Vedics
+              <span class="card-arrow">↗</span>
+            </h4>
+            <p class="project-synopsis">
+              Ayurvedic health &amp; wellness D2C storefront featuring streamlined product storytelling, bundle mechanics, and rapid checkout.
+            </p>
+            <div class="project-chips">
+              <span>Shopify Liquid</span>
+              <span>Wellness D2C</span>
+              <span>Checkout Tuning</span>
+            </div>
+          </div>
+          <a href="https://bhumikavedics.in/" target="_blank" rel="noopener" class="stretched-link" aria-label="View Bhumika Vedics" style="position: absolute; inset: 0; z-index: 5;"></a>
+        </div>
+
+        <!-- 04: Ekho Futur -->
+        <div class="project-card fade-up-element" data-category="nextjs">
+          <div class="browser-chrome">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">ekhofutur.com</div>
+          </div>
+          <div class="project-img-box">
+            <img src="assets/images/proj_ekhofutur.png" alt="Ekho Futur Tech" loading="lazy" />
+            <div class="project-hover-overlay">
+              <span class="view-live-pill">Explore Site ↗</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header-meta">
+              <span class="project-index">// 04 · NEXT-GEN TECH</span>
+              <span class="project-category-tag">Next.js</span>
+            </div>
+            <h4 class="project-name">
+              Ekho Futur
+              <span class="card-arrow">↗</span>
+            </h4>
+            <p class="project-synopsis">
+              Futuristic digital solutions and innovation venture portal built with Next.js for buttery smooth animations and elite brand poise.
+            </p>
+            <div class="project-chips">
+              <span>Next.js</span>
+              <span>Tailwind CSS</span>
+              <span>Modern Web</span>
+            </div>
+          </div>
+          <a href="https://ekhofutur.com/" target="_blank" rel="noopener" class="stretched-link" aria-label="View Ekho Futur" style="position: absolute; inset: 0; z-index: 5;"></a>
+        </div>
+
+        <!-- 05: RentalLogics Kerala -->
+        <div class="project-card fade-up-element" data-category="nextjs">
+          <div class="browser-chrome">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">rentallogicskerala.com</div>
+          </div>
+          <div class="project-img-box">
+            <img src="assets/images/proj_rentallogics.png" alt="RentalLogics Kerala Platform" loading="lazy" />
+            <div class="project-hover-overlay">
+              <span class="view-live-pill">Explore Engine ↗</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header-meta">
+              <span class="project-index">// 05 · MOBILITY TECH</span>
+              <span class="project-category-tag">Next.js</span>
+            </div>
+            <h4 class="project-name">
+              RentalLogics Kerala
+              <span class="card-arrow">↗</span>
+            </h4>
+            <p class="project-synopsis">
+              Two-wheeler rental &amp; fleet management booking web application tailored for tourism and daily commuters across Kerala.
+            </p>
+            <div class="project-chips">
+              <span>Next.js</span>
+              <span>Booking Flow</span>
+              <span>Dynamic Fleet</span>
+            </div>
+          </div>
+          <a href="https://www.rentallogicskerala.com/" target="_blank" rel="noopener" class="stretched-link" aria-label="View RentalLogics Kerala" style="position: absolute; inset: 0; z-index: 5;"></a>
+        </div>
+
+        <!-- 06: TravelCrest -->
+        <div class="project-card fade-up-element" data-category="wordpress">
+          <div class="browser-chrome">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">travelcrest.in</div>
+          </div>
+          <div class="project-img-box">
+            <img src="assets/images/proj_travelcrest.png" alt="TravelCrest Holidays" loading="lazy" />
+            <div class="project-hover-overlay">
+              <span class="view-live-pill">Explore Expeditions ↗</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header-meta">
+              <span class="project-index">// 06 · TOURISM &amp; TRAVEL</span>
+              <span class="project-category-tag">WordPress</span>
+            </div>
+            <h4 class="project-name">
+              TravelCrest
+              <span class="card-arrow">↗</span>
+            </h4>
+            <p class="project-synopsis">
+              Premium Kerala holiday and itinerary discovery portal with custom package builders and high-converting inquiry forms.
+            </p>
+            <div class="project-chips">
+              <span>WordPress</span>
+              <span>Travel Engine</span>
+              <span>Kerala Tourism</span>
+            </div>
+          </div>
+          <a href="https://travelcrest.in/" target="_blank" rel="noopener" class="stretched-link" aria-label="View TravelCrest" style="position: absolute; inset: 0; z-index: 5;"></a>
+        </div>
+
+        <!-- 07: ZeroFootmarks -->
+        <div class="project-card fade-up-element" data-category="shopify">
+          <div class="browser-chrome">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">zerofootmarks.com</div>
+          </div>
+          <div class="project-img-box">
+            <img src="assets/images/proj_zerofootmarks.png" alt="ZeroFootmarks Eco Platform" loading="lazy" />
+            <div class="project-hover-overlay">
+              <span class="view-live-pill">Explore Store ↗</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header-meta">
+              <span class="project-index">// 07 · ECO COMMERCE</span>
+              <span class="project-category-tag">Shopify</span>
+            </div>
+            <h4 class="project-name">
+              ZeroFootmarks
+              <span class="card-arrow">↗</span>
+            </h4>
+            <p class="project-synopsis">
+              Sustainable eco-tourism initiative and conscious travel gear store engineered with carbon-minimalist design principles.
+            </p>
+            <div class="project-chips">
+              <span>Shopify</span>
+              <span>Sustainable Travel</span>
+              <span>Eco Store</span>
+            </div>
+          </div>
+          <a href="https://zerofootmarks.com/" target="_blank" rel="noopener" class="stretched-link" aria-label="View ZeroFootmarks" style="position: absolute; inset: 0; z-index: 5;"></a>
+        </div>
+
+        <!-- 08: NestCampus -->
+        <div class="project-card fade-up-element" data-category="wordpress">
+          <div class="browser-chrome">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">nestcampus.com</div>
+          </div>
+          <div class="project-img-box">
+            <img src="assets/images/proj_nestcampus.png" alt="NestCampus Real Estate" loading="lazy" />
+            <div class="project-hover-overlay">
+              <span class="view-live-pill">Explore Listings ↗</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header-meta">
+              <span class="project-index">// 08 · STUDENT HOUSING</span>
+              <span class="project-category-tag">WordPress</span>
+            </div>
+            <h4 class="project-name">
+              NestCampus
+              <span class="card-arrow">↗</span>
+            </h4>
+            <p class="project-synopsis">
+              Student accommodation discovery platform featuring verified property listings, filtering by university proximity, and virtual tours.
+            </p>
+            <div class="project-chips">
+              <span>WordPress</span>
+              <span>Real Estate</span>
+              <span>Filtering Engine</span>
+            </div>
+          </div>
+          <a href="https://www.nestcampus.com/" target="_blank" rel="noopener" class="stretched-link" aria-label="View NestCampus" style="position: absolute; inset: 0; z-index: 5;"></a>
+        </div>
+
+        <!-- 09: MIM Creative Agency -->
+        <div class="project-card fade-up-element" data-category="wordpress">
+          <div class="browser-chrome">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">mim.com.co</div>
+          </div>
+          <div class="project-img-box">
+            <img src="assets/images/proj_mim.png" alt="MIM Production Agency" loading="lazy" />
+            <div class="project-hover-overlay">
+              <span class="view-live-pill">Explore Work ↗</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header-meta">
+              <span class="project-index">// 09 · CREATIVE PRODUCTION</span>
+              <span class="project-category-tag">WordPress</span>
+            </div>
+            <h4 class="project-name">
+              MIM Co.
+              <span class="card-arrow">↗</span>
+            </h4>
+            <p class="project-synopsis">
+              High-end creative production and branding studio website featuring cinematic full-screen showcases and bespoke micro-interactions.
+            </p>
+            <div class="project-chips">
+              <span>WordPress</span>
+              <span>Creative Agency</span>
+              <span>Bespoke Visuals</span>
+            </div>
+          </div>
+          <a href="https://mim.com.co/" target="_blank" rel="noopener" class="stretched-link" aria-label="View MIM Co." style="position: absolute; inset: 0; z-index: 5;"></a>
+        </div>
+
+        <!-- 10: GlobalMediLink -->
+        <div class="project-card fade-up-element" data-category="wordpress">
+          <div class="browser-chrome">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">globalmedilink.com</div>
+          </div>
+          <div class="project-img-box">
+            <img src="assets/images/proj_globalmedilink.png" alt="GlobalMediLink Healthcare" loading="lazy" />
+            <div class="project-hover-overlay">
+              <span class="view-live-pill">Explore Network ↗</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header-meta">
+              <span class="project-index">// 10 · GLOBAL HEALTHCARE</span>
+              <span class="project-category-tag">WordPress</span>
+            </div>
+            <h4 class="project-name">
+              GlobalMediLink
+              <span class="card-arrow">↗</span>
+            </h4>
+            <p class="project-synopsis">
+              International patient-specialist medical network facilitating second opinions, cross-border appointments, and treatment pathways.
+            </p>
+            <div class="project-chips">
+              <span>WordPress</span>
+              <span>Healthcare Portal</span>
+              <span>Compliance UI</span>
+            </div>
+          </div>
+          <a href="https://globalmedilink.com/" target="_blank" rel="noopener" class="stretched-link" aria-label="View GlobalMediLink" style="position: absolute; inset: 0; z-index: 5;"></a>
+        </div>
+
+        <!-- 11: Al Mirash -->
+        <div class="project-card fade-up-element" data-category="wordpress">
+          <div class="browser-chrome">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">almirash.com</div>
+          </div>
+          <div class="project-img-box">
+            <img src="assets/images/proj_almirash.png" alt="Al Mirash Trading" loading="lazy" />
+            <div class="project-hover-overlay">
+              <span class="view-live-pill">Explore Enterprise ↗</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header-meta">
+              <span class="project-index">// 11 · INDUSTRIAL TRADING</span>
+              <span class="project-category-tag">WordPress</span>
+            </div>
+            <h4 class="project-name">
+              Al Mirash
+              <span class="card-arrow">↗</span>
+            </h4>
+            <p class="project-synopsis">
+              Industrial trading, contracting, and technical equipment supply corporate portal tailored for GCC enterprise procurement.
+            </p>
+            <div class="project-chips">
+              <span>WordPress</span>
+              <span>Corporate B2B</span>
+              <span>GCC Markets</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12: Aman ABS -->
+        <div class="project-card fade-up-element" data-category="wordpress">
+          <div class="browser-chrome">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">amanabs.com</div>
+          </div>
+          <div class="project-img-box">
+            <img src="assets/images/proj_amanabs.png" alt="Aman ABS Automotive Solutions" loading="lazy" />
+            <div class="project-hover-overlay">
+              <span class="view-live-pill">Explore Tech ↗</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header-meta">
+              <span class="project-index">// 12 · AUTOMOTIVE TECH</span>
+              <span class="project-category-tag">WordPress</span>
+            </div>
+            <h4 class="project-name">
+              Aman ABS
+              <span class="card-arrow">↗</span>
+            </h4>
+            <p class="project-synopsis">
+              Automotive brake safety systems, diagnostic equipment, and fleet service solutions showcase for commercial vehicle operators.
+            </p>
+            <div class="project-chips">
+              <span>WordPress</span>
+              <span>Automotive</span>
+              <span>Technical Services</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 03: THE ARSENAL (SKILLS & ARCHITECTURE) -->
+  <section id="arsenal" class="section skills-section">
+    <div class="container">
+      <div class="chapter-meta">
+        <span class="chapter-number">03</span>
+        <span>THE TECHNICAL ARSENAL</span>
+      </div>
+
+      <h2 class="section-title">
+        Engineered For Speed. <span class="yellow-text">Built To Convert.</span>
+      </h2>
+      <p class="section-desc">
+        I don't choose technologies based on hype. Every tool in my stack is chosen for its ability to increase loading speed, improve search rankings, and guarantee effortless maintenance.
+      </p>
+
+      <div class="skills-matrix">
+        <!-- Pillar 01: Modern Front-End -->
+        <div class="skill-pillar fade-up-element">
+          <div class="pillar-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <h4>Modern Front-End</h4>
+          <div class="skill-items-list">
+            <div class="skill-row">
+              <div class="skill-meta"><span>React &amp; Next.js</span><span>85%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="85"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-meta"><span>TypeScript &amp; ES6+</span><span>80%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="80"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-meta"><span>Tailwind CSS</span><span>92%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="92"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-meta"><span>Semantic HTML5 &amp; CSS3</span><span>98%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="98"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 02: CMS & Decoupled Web -->
+        <div class="skill-pillar fade-up-element">
+          <div class="pillar-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <h4>CMS &amp; Headless</h4>
+          <div class="skill-items-list">
+            <div class="skill-row">
+              <div class="skill-meta"><span>Custom WordPress</span><span>95%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="95"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-meta"><span>Elementor Pro Mastery</span><span>95%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="95"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-meta"><span>Headless WP REST API</span><span>84%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="84"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-meta"><span>WooCommerce Architecture</span><span>90%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="90"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 03: E-Commerce Velocity -->
+        <div class="skill-pillar fade-up-element">
+          <div class="pillar-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+          </div>
+          <h4>E-Commerce Scale</h4>
+          <div class="skill-items-list">
+            <div class="skill-row">
+              <div class="skill-meta"><span>Shopify Custom Themes</span><span>88%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="88"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-meta"><span>Shopify Liquid Templating</span><span>85%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="85"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-meta"><span>Conversion Rate UI (CRO)</span><span>90%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="90"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-meta"><span>Payment &amp; Cart Logic</span><span>92%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="92"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 04: AI Velocity & Workflows -->
+        <div class="skill-pillar fade-up-element">
+          <div class="pillar-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+            </svg>
+          </div>
+          <h4>AI-Augmented Dev</h4>
+          <div class="skill-items-list">
+            <div class="skill-row">
+              <div class="skill-meta"><span>AI-Assisted Architecture</span><span>92%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="92"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-meta"><span>Rapid Prototyping</span><span>94%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="94"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-meta"><span>Automated QA &amp; Auditing</span><span>88%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="88"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-meta"><span>Speed &amp; SEO Optimization</span><span>95%</span></div>
+              <div class="skill-track"><div class="skill-gauge" data-target="95"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Cloud Badges -->
+      <div class="tech-badges-flow">
+        <span class="tech-badge-item">Next.js 14</span>
+        <span class="tech-badge-item">React.js</span>
+        <span class="tech-badge-item">TypeScript</span>
+        <span class="tech-badge-item">Tailwind CSS</span>
+        <span class="tech-badge-item">WordPress Core</span>
+        <span class="tech-badge-item">Shopify Liquid</span>
+        <span class="tech-badge-item">WooCommerce</span>
+        <span class="tech-badge-item">Elementor Pro</span>
+        <span class="tech-badge-item">Headless CMS</span>
+        <span class="tech-badge-item">Git / GitHub</span>
+        <span class="tech-badge-item">Vercel Deployment</span>
+        <span class="tech-badge-item">REST APIs</span>
+        <span class="tech-badge-item">Core Web Vitals</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 04: THE BLUEPRINT & SERVICES -->
+  <section id="services" class="section services-section">
+    <div class="container">
+      <div class="chapter-meta">
+        <span class="chapter-number">04</span>
+        <span>WHAT WE CAN BUILD</span>
+      </div>
+
+      <h2 class="section-title">
+        High-Value Services Designed For <span class="yellow-text">Measurable Growth.</span>
+      </h2>
+      <p class="section-desc">
+        Whether you are launching from zero, migrating from an outdated legacy stack, or scaling an e-commerce brand, here is how I can help.
+      </p>
+
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon"><svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" />
-              <path stroke="currentColor" stroke-width="2" d="M3 9h18" />
-            </svg></div>
-          <h3>Website Development</h3>
-          <p>Responsive and modern websites for businesses and personal brands.</p>
+        <!-- Service 01 -->
+        <div class="service-card fade-up-element">
+          <span class="service-num">// 01 · BESPOKE WEB APPS</span>
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3>Next.js &amp; Modern Front-End</h3>
+          <p>
+            Ultra-fast, dynamic web applications with buttery smooth page transitions, headless API integrations, and instant loading speeds that keep visitors engaged.
+          </p>
         </div>
-        <div class="service-card">
-          <div class="service-icon"><svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
-              <path stroke="currentColor" stroke-width="2"
-                d="M12 3c0 0-4 3-4 9s4 9 4 9m0-18c0 0 4 3 4 9s-4 9-4 9M3 12h18" />
-            </svg></div>
-          <h3>WordPress Development</h3>
-          <p>Custom WordPress websites with Elementor and WooCommerce.</p>
+
+        <!-- Service 02 -->
+        <div class="service-card fade-up-element">
+          <span class="service-num">// 02 · CMS ARCHITECTURES</span>
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+          </div>
+          <h3>Custom WordPress Mastery</h3>
+          <p>
+            Clean, unbloated WordPress websites tailored for marketing teams and business owners who want complete content autonomy without touching code.
+          </p>
         </div>
-        <div class="service-card">
-          <div class="service-icon"><svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-width="2"
-                d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
-              <path stroke="currentColor" stroke-width="2" d="M9 9h6M9 13h6M9 17h4" />
-            </svg></div>
-          <h3>Shopify Development</h3>
-          <p>Creating and customizing Shopify stores with Liquid templating.</p>
+
+        <!-- Service 03 -->
+        <div class="service-card fade-up-element">
+          <span class="service-num">// 03 · COMMERCE ENGINES</span>
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+          </div>
+          <h3>High-Converting Shopify D2C</h3>
+          <p>
+            Custom Shopify stores built to maximize average order value (AOV), seamless mobile checkouts, custom product variants, and conversion optimization.
+          </p>
         </div>
-        <div class="service-card">
-          <div class="service-icon"><svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-width="2"
-                d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" />
-              <path stroke="currentColor" stroke-width="2" d="M8 10l4-4 4 4M8 14l4 4 4-4" />
-            </svg></div>
-          <h3>Headless Development</h3>
-          <p>Next.js with Headless WordPress for blazing performance.</p>
+      </div>
+
+      <!-- The 4-Step Velocity Framework -->
+      <div class="process-box fade-up-element">
+        <div class="process-header">
+          <span class="chapter-meta"><span class="chapter-number">⚡</span> THE VELOCITY BLUEPRINT</span>
+          <h3>How Projects Go From Vision To Launch</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            A transparent, collaborative workflow engineered to eliminate scope creep and deliver on schedule.
+          </p>
         </div>
-        <div class="service-card">
-          <div class="service-icon"><svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-              <polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-              <polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            </svg></div>
-          <h3>Front-End Development</h3>
-          <p>Responsive UIs using HTML, CSS, JavaScript, React, Tailwind CSS.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon"><svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-width="2" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z" />
-              <path stroke="currentColor" stroke-width="2" d="M12 8v4l3 3" />
-            </svg></div>
-          <h3>AI-Assisted Development</h3>
-          <p>Using AI for planning, debugging, documentation and workflow optimization.</p>
+
+        <div class="process-steps">
+          <div class="step-card">
+            <div class="step-count">01</div>
+            <h4>Architecture &amp; Strategy</h4>
+            <p>We dissect your business goals, target audience, technical constraints, and wireframe the highest-converting user journey.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-count">02</div>
+            <h4>Bespoke Visual Polish</h4>
+            <p>Every layout, typography pairing, and animation is designed for maximum brand authority and zero template feel.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-count">03</div>
+            <h4>High-Velocity Build</h4>
+            <p>Clean, maintainable code written with semantic standards, performance benchmarks, and strict cross-device testing.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-count">04</div>
+            <h4>Audit, Launch &amp; Scale</h4>
+            <p>Lighthouse audits, SEO setup, DNS migration, and a comprehensive handover video tutorial so you remain fully in control.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="skills section">
+  <!-- CHAPTER 05: PROOF & IMPACT -->
+  <section class="section impact-section">
     <div class="container">
-      <div class="section-tag">My Skills</div>
-      <h2 class="section-title">Technologies I <span class="gradient-text">Master</span></h2>
-      <div class="skills-wrapper">
-        <div class="skills-col">
-          <h4>Front-End</h4>
-          <div class="skill-item"><span>HTML5</span>
-            <div class="skill-bar">
-              <div class="skill-fill" data-w="95"></div>
-            </div><span class="pct">95%</span>
-          </div>
-          <div class="skill-item"><span>CSS3</span>
-            <div class="skill-bar">
-              <div class="skill-fill" data-w="92"></div>
-            </div><span class="pct">92%</span>
-          </div>
-          <div class="skill-item"><span>JavaScript</span>
-            <div class="skill-bar">
-              <div class="skill-fill" data-w="88"></div>
-            </div><span class="pct">88%</span>
-          </div>
-          <div class="skill-item"><span>TypeScript</span>
-            <div class="skill-bar">
-              <div class="skill-fill" data-w="75"></div>
-            </div><span class="pct">75%</span>
-          </div>
-          <div class="skill-item"><span>React</span>
-            <div class="skill-bar">
-              <div class="skill-fill" data-w="82"></div>
-            </div><span class="pct">82%</span>
-          </div>
-          <div class="skill-item"><span>Next.js</span>
-            <div class="skill-bar">
-              <div class="skill-fill" data-w="80"></div>
-            </div><span class="pct">80%</span>
-          </div>
-          <div class="skill-item"><span>Tailwind CSS</span>
-            <div class="skill-bar">
-              <div class="skill-fill" data-w="90"></div>
-            </div><span class="pct">90%</span>
-          </div>
+      <div class="chapter-meta">
+        <span class="chapter-number">05</span>
+        <span>MEASURABLE IMPACT</span>
+      </div>
+
+      <h2 class="section-title">
+        The Numbers Behind <span class="yellow-text">Five Years Of Work.</span>
+      </h2>
+      <p class="section-desc">
+        Real results achieved across diverse industries and markets.
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-box fade-up-element">
+          <div class="stat-number" data-count="70">70+</div>
+          <div class="stat-label">Delivered Projects</div>
+          <div class="stat-caption">Across 6+ distinct industries</div>
         </div>
-        <div class="skills-col">
-          <h4>CMS & eCommerce</h4>
-          <div class="skill-item"><span>WordPress</span>
-            <div class="skill-bar">
-              <div class="skill-fill" data-w="95"></div>
-            </div><span class="pct">95%</span>
-          </div>
-          <div class="skill-item"><span>Elementor</span>
-            <div class="skill-bar">
-              <div class="skill-fill" data-w="93"></div>
-            </div><span class="pct">93%</span>
-          </div>
-          <div class="skill-item"><span>WooCommerce</span>
-            <div class="skill-bar">
-              <div class="skill-fill" data-w="88"></div>
-            </div><span class="pct">88%</span>
-          </div>
-          <div class="skill-item"><span>Shopify</span>
-            <div class="skill-bar">
-              <div class="skill-fill" data-w="85"></div>
-            </div><span class="pct">85%</span>
-          </div>
-          <div class="skill-item"><span>Shopify Liquid</span>
-            <div class="skill-bar">
-              <div class="skill-fill" data-w="80"></div>
-            </div><span class="pct">80%</span>
-          </div>
-          <h4 style="margin-top:2rem">AI Workflow</h4>
-          <div class="skill-item"><span>AI-Assisted Coding</span>
-            <div class="skill-bar">
-              <div class="skill-fill" data-w="90"></div>
-            </div><span class="pct">90%</span>
-          </div>
-          <div class="skill-item"><span>Prompt Engineering</span>
-            <div class="skill-bar">
-              <div class="skill-fill" data-w="88"></div>
-            </div><span class="pct">88%</span>
-          </div>
+        <div class="stat-box fade-up-element">
+          <div class="stat-number" data-count="5">5+</div>
+          <div class="stat-label">Years of Experience</div>
+          <div class="stat-caption">Continuous craft &amp; evolution</div>
+        </div>
+        <div class="stat-box fade-up-element">
+          <div class="stat-number" data-count="100">100%</div>
+          <div class="stat-label">Satisfaction Rate</div>
+          <div class="stat-caption">Verified client relationships</div>
+        </div>
+        <div class="stat-box fade-up-element">
+          <div class="stat-number">&lt; 1.2s</div>
+          <div class="stat-label">Average Page Load</div>
+          <div class="stat-caption">Sub-second Core Web Vitals</div>
         </div>
       </div>
-      <div class="tech-cloud">
-        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>TypeScript</span>
-        <span>React</span><span>Next.js</span><span>Tailwind CSS</span><span>WordPress</span>
-        <span>Elementor</span><span>WooCommerce</span><span>Shopify</span><span>Shopify Liquid</span>
-        <span>Headless CMS</span><span>Git</span><span>GitHub</span><span>AI Tools</span>
-        <span>Prompt Engineering</span><span>Responsive Design</span>
-      </div>
-    </div>
-  </section>
 
-  <!-- WORK -->
-  <section id="work" class="work section">
-    <div class="container">
-      <div class="section-tag">My Portfolio</div>
-      <h2 class="section-title">Some of My <span class="gradient-text">Recent Work</span></h2>
-      <p class="section-desc">Here are websites I've designed and developed for clients across different industries.</p>
-      <div class="projects-grid">
-
-        <a href="https://blissgardenlandscaping.com/" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="assets/images/proj_blissgarden.png" alt="Bliss Garden Landscaping"
-              onerror="this.parentElement.classList.add('img-error');this.remove();" />
-            <div class="project-overlay"><span class="view-btn">View Live ↗</span></div>
+      <!-- Testimonials -->
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-up-element">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">
+            "Arjun understood our design ethos immediately. He transformed our landscape architecture showcase into a digital portfolio that won us major commercial contracts in the GCC."
+          </p>
+          <div class="test-client">
+            <strong>Client · Bliss Garden</strong>
+            <span>Landscaping &amp; Architecture</span>
           </div>
-          <div class="project-info">
-            <div class="project-num">01</div>
-            <h3>Bliss Garden Landscaping</h3>
-            <p>Nature-centric landscaping website with stunning visuals</p>
-            <div class="project-tags"><span>WordPress</span><span>Landscaping</span></div>
-          </div>
-        </a>
-
-        <a href="https://automatemybiz.ai/" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="assets/images/proj_automatemybiz.png" alt="Automate My Biz"
-              onerror="this.parentElement.classList.add('img-error');this.remove();" />
-            <div class="project-overlay"><span class="view-btn">View Live ↗</span></div>
-          </div>
-          <div class="project-info">
-            <div class="project-num">02</div>
-            <h3>AutomateMyBiz.ai</h3>
-            <p>AI automation business website with dark modern aesthetic</p>
-            <div class="project-tags"><span>Wordpress</span><span>AI Automation</span></div>
-          </div>
-        </a>
-
-
-
-        <a href="https://travelcrest.in/" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="assets/images/proj_travelcrest.png" alt="TravelCrest"
-              onerror="this.parentElement.classList.add('img-error');this.remove();" />
-            <div class="project-overlay"><span class="view-btn">View Live ↗</span></div>
-          </div>
-          <div class="project-info">
-            <div class="project-num">03</div>
-            <h3>TravelCrest</h3>
-            <p>Premium travel and tourism website for Kerala adventures</p>
-            <div class="project-tags"><span>WordPress</span><span>Travel</span></div>
-          </div>
-        </a>
-
-        <a href="https://www.nestcampus.com/" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="assets/images/proj_nestcampus.png" alt="NestCampus"
-              onerror="this.parentElement.classList.add('img-error');this.remove();" />
-            <div class="project-overlay"><span class="view-btn">View Live ↗</span></div>
-          </div>
-          <div class="project-info">
-            <div class="project-num">04</div>
-            <h3>NestCampus</h3>
-            <p>Student accommodation platform with property listings</p>
-            <div class="project-tags"><span>WordPress</span><span>Real Estate</span></div>
-          </div>
-        </a>
-
-        <a href="https://mim.com.co/" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="assets/images/proj_mim.png" alt="MIM"
-              onerror="this.parentElement.classList.add('img-error');this.remove();" />
-            <div class="project-overlay"><span class="view-btn">View Live ↗</span></div>
-          </div>
-          <div class="project-info">
-            <div class="project-num">05</div>
-            <h3>MIM</h3>
-            <p>Creative agency website with bold visual storytelling</p>
-            <div class="project-tags"><span>WordPress</span><span>Agency</span></div>
-          </div>
-        </a>
-
-        <a href="https://bhumikavedics.in/" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="assets/images/proj_bhumikavedics.png" alt="Bhumika Vedics"
-              onerror="this.parentElement.classList.add('img-error');this.remove();" />
-            <div class="project-overlay"><span class="view-btn">View Live ↗</span></div>
-          </div>
-          <div class="project-info">
-            <div class="project-num">06</div>
-            <h3>Bhumika Vedics</h3>
-            <p>Ayurveda & wellness website with warm earthy tones</p>
-            <div class="project-tags"><span>Shopify</span><span>Wellness</span></div>
-          </div>
-        </a>
-
-        <a href="https://globalmedilink.com/" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="assets/images/proj_globalmedilink.png" alt="GlobalMediLink"
-              onerror="this.parentElement.classList.add('img-error');this.remove();" />
-            <div class="project-overlay"><span class="view-btn">View Live ↗</span></div>
-          </div>
-          <div class="project-info">
-            <div class="project-num">07</div>
-            <h3>GlobalMediLink</h3>
-            <p>Healthcare platform connecting patients with global specialists</p>
-            <div class="project-tags"><span>WordPress</span><span>Healthcare</span></div>
-          </div>
-        </a>
-
-        <a href="https://zerofootmarks.com/" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="assets/images/proj_zerofootmarks.png" alt="ZeroFootmarks"
-              onerror="this.parentElement.classList.add('img-error');this.remove();" />
-            <div class="project-overlay"><span class="view-btn">View Live ↗</span></div>
-          </div>
-          <div class="project-info">
-            <div class="project-num">08</div>
-            <h3>ZeroFootmarks</h3>
-            <p>Eco-travel platform promoting sustainable tourism</p>
-            <div class="project-tags"><span>Shopify</span><span>Eco Travel</span></div>
-          </div>
-        </a>
-
-        <a href="https://ekhofutur.com/" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="assets/images/proj_ekhofutur.png" alt="Ekho Futur"
-              onerror="this.parentElement.classList.add('img-error');this.remove();" />
-            <div class="project-overlay"><span class="view-btn">View Live ↗</span></div>
-          </div>
-          <div class="project-info">
-            <div class="project-num">09</div>
-            <h3>Ekho Futur</h3>
-            <p>Forward-thinking tech company with futuristic design</p>
-            <div class="project-tags"><span>Next.js</span><span>Tech</span></div>
-          </div>
-        </a>
-
-        <a href="https://www.rentallogicskerala.com/" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="assets/images/proj_rentallogics.png" alt="RentalLogics Kerala"
-              onerror="this.parentElement.classList.add('img-error');this.remove();" />
-            <div class="project-overlay"><span class="view-btn">View Live ↗</span></div>
-          </div>
-          <div class="project-info">
-            <div class="project-num">10</div>
-            <h3>RentalLogics Kerala</h3>
-            <p>Property rental platform serving the Kerala market</p>
-            <div class="project-tags"><span>Next.js</span><span>Rental Bike</span></div>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPLORING -->
-  <section class="exploring section">
-    <div class="container">
-      <div class="section-tag">Always Learning</div>
-      <h2 class="section-title">Currently <span class="gradient-text">Exploring</span></h2>
-      <div class="exploring-grid">
-        <div class="explore-card">
-          <div class="explore-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M12 2C10.3431 2 9 3.34315 9 5C9 5.73952 9.26806 6.41608 9.71429 6.9375C8.03907 7.47064 7 8.86146 7 10.5V11H17V10.5C17 8.86146 15.9609 7.47064 14.2857 6.9375C14.7319 6.41608 15 5.73952 15 5C15 3.34315 13.6569 2 12 2Z"
-                stroke="url(#g1)" stroke-width="1.5" stroke-linecap="round" />
-              <rect x="9" y="11" width="6" height="8" rx="1" stroke="url(#g1)" stroke-width="1.5" />
-              <path d="M9 14H7C5.89543 14 5 13.1046 5 12V12C5 10.8954 5.89543 10 7 10" stroke="url(#g1)"
-                stroke-width="1.5" stroke-linecap="round" />
-              <path d="M15 14H17C18.1046 14 19 13.1046 19 12V12C19 10.8954 18.1046 10 17 10" stroke="url(#g1)"
-                stroke-width="1.5" stroke-linecap="round" />
-              <circle cx="10.5" cy="13" r="0.75" fill="url(#g1)" />
-              <circle cx="13.5" cy="13" r="0.75" fill="url(#g1)" />
-              <path d="M10 17L12 19L14 17" stroke="url(#g1)" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <defs>
-                <linearGradient id="g1" x1="5" y1="2" x2="19" y2="21" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#1a6bff" />
-                  <stop offset="1" stop-color="#ff2d55" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <h4>AI-Powered Development</h4>
-          <p>Integrating AI into every step of the dev workflow</p>
         </div>
-        <div class="explore-card">
-          <div class="explore-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="3" width="20" height="14" rx="2" stroke="url(#g2)" stroke-width="1.5" />
-              <path d="M8 21H16" stroke="url(#g2)" stroke-width="1.5" stroke-linecap="round" />
-              <path d="M12 17V21" stroke="url(#g2)" stroke-width="1.5" stroke-linecap="round" />
-              <path d="M9 10L11 12L9 14" stroke="url(#g2)" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path d="M13 14H15" stroke="url(#g2)" stroke-width="1.5" stroke-linecap="round" />
-              <defs>
-                <linearGradient id="g2" x1="2" y1="3" x2="22" y2="21" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#1a6bff" />
-                  <stop offset="1" stop-color="#ff2d55" />
-                </linearGradient>
-              </defs>
-            </svg>
+
+        <div class="testimonial-card fade-up-element">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">
+            "Working with Arjun was frictionless. The AutomateMyBiz website looks like an Awwwards winner and converts cold traffic into booked strategy calls every week."
+          </p>
+          <div class="test-client">
+            <strong>Founder · AutomateMyBiz.ai</strong>
+            <span>AI Consultancy</span>
           </div>
-          <h4>Modern UI Development</h4>
-          <p>Building cutting-edge interfaces with latest frameworks</p>
         </div>
-        <div class="explore-card">
-          <div class="explore-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="12" cy="5" rx="8" ry="3" stroke="url(#g3)" stroke-width="1.5" />
-              <path d="M4 5V12C4 13.6569 7.58172 15 12 15C16.4183 15 20 13.6569 20 12V5" stroke="url(#g3)"
-                stroke-width="1.5" />
-              <path d="M4 12V19C4 20.6569 7.58172 22 12 22C16.4183 22 20 20.6569 20 19V12" stroke="url(#g3)"
-                stroke-width="1.5" />
-              <path d="M20 8.5L22 6.5L20 4.5" stroke="url(#g3)" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path d="M22 6.5H17" stroke="url(#g3)" stroke-width="1.5" stroke-linecap="round" />
-              <defs>
-                <linearGradient id="g3" x1="4" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#1a6bff" />
-                  <stop offset="1" stop-color="#ff2d55" />
-                </linearGradient>
-              </defs>
-            </svg>
+
+        <div class="testimonial-card fade-up-element">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">
+            "Fast, reliable, and deeply knowledgeable. Our D2C store checkout speed doubled, and mobile customer drop-offs decreased significantly within days of launch."
+          </p>
+          <div class="test-client">
+            <strong>Brand Director · Bhumika Vedics</strong>
+            <span>Ayurvedic E-Commerce</span>
           </div>
-          <h4>Headless CMS Architecture</h4>
-          <p>Decoupled frontends with Next.js + Headless WordPress</p>
-        </div>
-        <div class="explore-card">
-          <div class="explore-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="9" stroke="url(#g4)" stroke-width="1.5" />
-              <path d="M12 3C12 3 9 7 9 12C9 17 12 21 12 21" stroke="url(#g4)" stroke-width="1.5"
-                stroke-linecap="round" />
-              <path d="M12 3C12 3 15 7 15 12C15 17 12 21 12 21" stroke="url(#g4)" stroke-width="1.5"
-                stroke-linecap="round" />
-              <path d="M3 12H21" stroke="url(#g4)" stroke-width="1.5" stroke-linecap="round" />
-              <path d="M4.5 7.5H19.5" stroke="url(#g4)" stroke-width="1.5" stroke-linecap="round" />
-              <path d="M4.5 16.5H19.5" stroke="url(#g4)" stroke-width="1.5" stroke-linecap="round" />
-              <defs>
-                <linearGradient id="g4" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#1a6bff" />
-                  <stop offset="1" stop-color="#ff2d55" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <h4>Modern Web Technologies</h4>
-          <p>Experimenting with the latest in web performance and APIs</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact section">
+  <!-- CHAPTER 06: INITIATE CONTACT (THE DISPATCH) -->
+  <section id="contact" class="section contact-section">
     <div class="container">
-      <div class="section-tag">Get In Touch</div>
-      <h2 class="section-title">Let's Build Something <span class="gradient-text">Meaningful</span></h2>
-      <p class="section-desc">Whether you have a project idea, need a website, or simply want to connect.</p>
-      <div class="contact-wrap">
-        <div class="contact-left">
-          <div class="contact-item">
-            <div class="contact-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-width="2"
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline stroke="currentColor" stroke-width="2" points="22,6 12,13 2,6" />
-              </svg></div>
-            <div>
-              <p class="contact-label">Email</p><a href="mailto:hello@arjunp.dev">arjunworks96@gmail.com</a>
+      <div class="chapter-meta">
+        <span class="chapter-number">06</span>
+        <span>THE DISPATCH</span>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-direct fade-up-element">
+          <h2 class="section-title">
+            Let's Build Something <span class="yellow-text">Legendary.</span>
+          </h2>
+          <p class="contact-lead">
+            Have an upcoming project, need to elevate an existing website, or want to discuss a partnership? Send a message and let's bring it to life.
+          </p>
+
+          <div class="contact-channels">
+            <a href="mailto:arjunworks96@gmail.com" class="channel-card">
+              <div class="channel-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="channel-info">
+                <small>Direct Email</small>
+                <strong>arjunworks96@gmail.com</strong>
+              </div>
+            </a>
+
+            <div class="channel-card">
+              <div class="channel-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="channel-info">
+                <small>Location &amp; Timezone</small>
+                <strong>Kerala, India (IST / UTC +5:30)</strong>
+              </div>
             </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-width="2" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" />
-              </svg></div>
-            <div>
-              <p class="contact-label">Location</p><span>Kerala, India</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
-                <polyline stroke="currentColor" stroke-width="2" points="12 6 12 12 16 14" />
-              </svg></div>
-            <div>
-              <p class="contact-label">Availability</p><span class="available">✦ Open to new projects</span>
+
+            <div class="channel-card">
+              <div class="channel-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="channel-info">
+                <small>Response Time</small>
+                <strong style="color: var(--yellow);">✦ Guaranteed within 24 hours</strong>
+              </div>
             </div>
           </div>
         </div>
-        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm"
-          onsubmit="handleSubmit(event)">
-          <input type="hidden" name="access_key" value="5766360c-a04d-4411-a165-b45265b39635" />
-          <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio" />
-          <div class="form-row">
-            <div class="form-group"><label for="fname">Your Name</label><input type="text" id="fname" name="name"
-                placeholder="John Doe" required /></div>
-            <div class="form-group"><label for="femail">Email Address</label><input type="email" id="femail"
-                name="email" placeholder="john@example.com" required /></div>
-          </div>
-          <div class="form-group"><label for="fsubject">Subject</label><input type="text" id="fsubject"
-              name="custom_subject" placeholder="Project Inquiry" /></div>
-          <div class="form-group"><label for="fmessage">Message</label><textarea id="fmessage" name="message" rows="5"
-              placeholder="Tell me about your project..." required></textarea></div>
-          <button type="submit" class="btn-primary btn-full" id="submitBtn">Send Message ↗</button>
-        </form>
+
+        <!-- Contact Form (Web3Forms Integration) -->
+        <div class="terminal-form fade-up-element">
+          <h3 class="form-title">Send A Direct Dispatch</h3>
+          <p class="form-sub">Fill out the details below to receive a custom proposal and scope outline.</p>
+
+          <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" onsubmit="handleSubmit(event)">
+            <input type="hidden" name="access_key" value="5766360c-a04d-4411-a165-b45265b39635" />
+            <input type="hidden" name="subject" value="New Portfolio Inquiry for Arjun P" />
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="fname">Your Name</label>
+                <input type="text" id="fname" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-field">
+                <label for="femail">Your Email</label>
+                <input type="email" id="femail" name="email" placeholder="john@company.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="fservice">Project Type</label>
+                <select id="fservice" name="service" style="color: #ffffff;">
+                  <option value="Next.js Web Application">Next.js Web Application</option>
+                  <option value="Custom WordPress Platform" selected>Custom WordPress Platform</option>
+                  <option value="Shopify E-Commerce Store">Shopify E-Commerce Store</option>
+                  <option value="Redesign & Performance Upgrade">Redesign &amp; Speed Upgrade</option>
+                  <option value="Other / Consultation">Other / General Consultation</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="fbudget">Target Timeline</label>
+                <input type="text" id="fbudget" name="timeline" placeholder="e.g. 2-4 weeks / ASAP" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="fmessage">Project Details &amp; Goals</label>
+              <textarea id="fmessage" name="message" rows="5"
+                placeholder="Tell me about your product, what problems you are facing, and what success looks like..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-yellow btn-full" id="submitBtn">
+              Transmit Message <span class="btn-arrow">↗</span>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="#home" class="logo"><span class="logo-mark">&lt;/&gt;</span> arjun<span
-            class="gradient-text">dev.in</span></a>
-        <p>Web Developer • AI-Assisted Developer • Mentor</p>
-        <p class="footer-tagline">Learning continuously. Building thoughtfully. Sharing knowledge.</p>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-badge">&lt;/&gt;</span>
+            <span>arjun<span class="yellow-text">.dev</span></span>
+          </a>
+          <p>
+            Independent web developer &amp; digital architect based in Kerala, India. Engineering high-converting, bespoke web experiences for global brands.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#story">Origin Story</a>
+            <a href="#works">Selected Works</a>
+            <a href="#arsenal">Technical Arsenal</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Direct Contact</h5>
+          <div class="footer-links">
+            <a href="mailto:arjunworks96@gmail.com">arjunworks96@gmail.com</a>
+            <a href="https://github.com/Ajuworks96" target="_blank" rel="noopener">GitHub Profile ↗</a>
+            <span style="color: var(--text-muted); font-size: 0.9rem;">Kerala, India (IST)</span>
+          </div>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
-        <a href="#skills">Skills</a><a href="#work">Work</a><a href="#contact">Contact</a>
-      </div>
-      <div class="footer-copy">
-        <p>© 2026 Arjun P. All rights reserved.</p>
-        <p>Made with ♥ from Kerala, India</p>
+
+      <div class="footer-bottom">
+        <p>© 2026 Arjun P. All rights reserved. Handcrafted without generic templates.</p>
+        <p class="crafted-by">
+          Powered by <span class="yellow-text">Pure Yellow &amp; Carbon Black</span> • Kerala, India
+        </p>
       </div>
     </div>
   </footer>
 
+  <!-- INTERACTIVE CLIENT ENGINE -->
   <script>
-    // Navbar scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
+    // 1. Reading Progress Bar
+    const progressEl = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+      progressEl.style.width = progress + '%';
+    }, { passive: true });
 
-    // Hamburger
+    // 2. Custom Magnetic Cursor (Desktop)
+    const cursorDot = document.getElementById('cursorDot');
+    const cursorFollower = document.getElementById('cursorFollower');
+
+    if (window.matchMedia('(pointer: fine)').matches) {
+      let mouseX = 0, mouseY = 0;
+      let followerX = 0, followerY = 0;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursorDot.style.left = mouseX + 'px';
+        cursorDot.style.top = mouseY + 'px';
+      });
+
+      function animateFollower() {
+        followerX += (mouseX - followerX) * 0.18;
+        followerY += (mouseY - followerY) * 0.18;
+        cursorFollower.style.left = followerX + 'px';
+        cursorFollower.style.top = followerY + 'px';
+        requestAnimationFrame(animateFollower);
+      }
+      requestAnimationFrame(animateFollower);
+
+      // Hover scale on interactive elements
+      const interactiveElements = document.querySelectorAll('a, button, input, select, textarea, .project-card, .filter-btn');
+      interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+      });
+    }
+
+    // 3. Navbar Scrolled State & Active Links
+    const navbar = document.getElementById('navbar');
+    const sections = document.querySelectorAll('section[id]');
+    const navAnchors = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+
+      let currentId = '';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 140;
+        if (window.scrollY >= top) {
+          currentId = sec.getAttribute('id');
+        }
+      });
+
+      navAnchors.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + currentId);
+      });
+    }, { passive: true });
+
+    // 4. Mobile Menu Toggle
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.querySelector('.nav-links');
-    hamburger.addEventListener('click', () => { navLinks.classList.toggle('open'); hamburger.classList.toggle('active'); });
-    document.querySelectorAll('.nav-links a').forEach(l => l.addEventListener('click', () => { navLinks.classList.remove('open'); hamburger.classList.remove('active'); }));
 
-    // Active nav
-    const sections = document.querySelectorAll('section[id]');
-    window.addEventListener('scroll', () => {
-      let cur = '';
-      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
-      document.querySelectorAll('.nav-links a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
     });
 
-    // Skill bars animate on scroll
-    const skillObserver = new IntersectionObserver((entries) => {
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // 5. Interactive Portfolio Category Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        projectCards.forEach(card => {
+          const category = card.dataset.category || '';
+          if (filter === 'all' || category.includes(filter)) {
+            card.style.display = 'flex';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 30);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 250);
+          }
+        });
+      });
+    });
+
+    // 6. Scroll Reveal Animations (IntersectionObserver)
+    const fadeObserver = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.skill-fill').forEach(bar => {
-            const w = bar.getAttribute('data-w');
-            setTimeout(() => { bar.style.width = w + '%'; }, 100);
+          entry.target.classList.add('in-view');
+          
+          // Animate skill gauges inside
+          entry.target.querySelectorAll('.skill-gauge').forEach(gauge => {
+            const target = gauge.getAttribute('data-target');
+            gauge.style.width = target + '%';
           });
+
+          obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.2 });
-    document.querySelectorAll('.skills-col').forEach(c => skillObserver.observe(c));
+    }, { threshold: 0.12 });
 
-    // Fade-in cards
-    const fadeObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), entry.target.dataset.delay || 0);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.service-card, .project-card, .explore-card, .stat-item').forEach((el, i) => {
-      el.classList.add('fade-up');
-      el.dataset.delay = (i % 4) * 80;
-      fadeObserver.observe(el);
-    });
+    document.querySelectorAll('.fade-up-element').forEach(el => fadeObserver.observe(el));
 
-    // Form submit with Web3Forms AJAX
+    // Also observe skill pillars specifically
+    document.querySelectorAll('.skill-pillar').forEach(p => fadeObserver.observe(p));
+
+    // 7. Form Submission with Web3Forms AJAX
     async function handleSubmit(e) {
       e.preventDefault();
       const form = e.target;
       const btn = document.getElementById('submitBtn');
-      const originalText = btn.textContent;
+      const originalHtml = btn.innerHTML;
 
       btn.disabled = true;
-      btn.textContent = 'Sending Message...';
+      btn.innerHTML = 'Transmitting Message...';
 
       try {
         const formData = new FormData(form);
@@ -692,23 +1308,27 @@
         const data = await response.json();
 
         if (data.success) {
-          btn.textContent = 'Message Sent! ✓';
-          btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+          btn.innerHTML = 'Dispatch Received! ✓';
+          btn.style.background = '#FFE500';
+          btn.style.color = '#000000';
           form.reset();
         } else {
-          btn.textContent = 'Failed to Send. Try Again';
-          btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+          btn.innerHTML = 'Submission Failed. Retry?';
+          btn.style.background = '#ff4d4d';
+          btn.style.color = '#ffffff';
         }
       } catch (err) {
-        btn.textContent = 'Error Sending Message';
-        btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+        btn.innerHTML = 'Connection Error';
+        btn.style.background = '#ff4d4d';
+        btn.style.color = '#ffffff';
       }
 
       setTimeout(() => {
         btn.disabled = false;
-        btn.textContent = originalText;
+        btn.innerHTML = originalHtml;
         btn.style.background = '';
-      }, 4000);
+        btn.style.color = '';
+      }, 5000);
     }
   </script>
 </body>

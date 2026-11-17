@@ -1,26 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <linearGradient id="faviconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a6bff"/>
-      <stop offset="100%" stop-color="#ff2d55"/>
-    </linearGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="12" result="blur"/>
+    <filter id="yellowGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
   <!-- Background icon shape -->
-  <rect x="32" y="32" width="448" height="448" rx="112" fill="#070a12" stroke="url(#faviconGrad)" stroke-width="16" />
+  <rect x="32" y="32" width="448" height="448" rx="112" fill="#050505" stroke="#FFE500" stroke-width="16" />
   <!-- Inner Glow Ring -->
-  <rect x="48" y="48" width="416" height="416" rx="96" fill="url(#faviconGrad)" opacity="0.1" />
+  <rect x="48" y="48" width="416" height="416" rx="96" fill="#FFE500" opacity="0.06" />
   
-  <!-- Code bracket emblem </> -->
-  <g filter="url(#glow)">
+  <!-- Code bracket emblem </> with Pure Electric Yellow -->
+  <g filter="url(#yellowGlow)">
     <!-- < bracket -->
-    <path d="M 170 170 L 105 256 L 170 342" fill="none" stroke="url(#faviconGrad)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 170 170 L 105 256 L 170 342" fill="none" stroke="#FFE500" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
     <!-- / slash -->
-    <path d="M 280 150 L 232 362" fill="none" stroke="url(#faviconGrad)" stroke-width="36" stroke-linecap="round" />
+    <path d="M 280 150 L 232 362" fill="none" stroke="#FFE500" stroke-width="36" stroke-linecap="round" />
     <!-- > bracket -->
-    <path d="M 342 170 L 407 256 L 342 342" fill="none" stroke="url(#faviconGrad)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 342 170 L 407 256 L 342 342" fill="none" stroke="#FFE500" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
   </g>
 </svg>
