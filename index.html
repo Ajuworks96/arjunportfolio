@@ -1237,8 +1237,10 @@
           <p class="form-sub">Fill out the details below to receive a custom proposal and scope outline.</p>
 
           <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" onsubmit="handleSubmit(event)">
-            <input type="hidden" name="access_key" value="5766360c-a04d-4411-a165-b45265b39635" />
+            <input type="hidden" name="access_key" id="accessKeyInput" value="5766360c-a04d-4411-a165-b45265b39635" />
             <input type="hidden" name="subject" value="New Portfolio Inquiry for Arjun P" />
+            <input type="hidden" name="from_name" value="Arjun Portfolio Dispatch" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
 
             <div class="form-row">
               <div class="form-field">
@@ -1483,11 +1485,13 @@
           btn.style.color = '#000000';
           form.reset();
         } else {
-          btn.innerHTML = 'Submission Failed. Retry?';
+          console.error('Submission error:', data);
+          btn.innerHTML = data.message || 'Submission Failed. Retry?';
           btn.style.background = '#ff4d4d';
           btn.style.color = '#ffffff';
         }
       } catch (err) {
+        console.error('Fetch error:', err);
         btn.innerHTML = 'Connection Error';
         btn.style.background = '#ff4d4d';
         btn.style.color = '#ffffff';
